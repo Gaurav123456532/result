@@ -1,0 +1,38 @@
+
+<div class="container" *ngIf="!isclicked">
+    <div>
+            <nav class="navbar">
+                <input style="color:white;background-color:black;width:800px;height:30px"type="text;placeholder:color:white" name="firstname" [(ngModel)]="firstname" (ngModelChange)="search()"
+                placeholder="Search for Names">
+                </nav>
+        </div>
+        <div style="margin-left: 820px;margin-top:-30px">
+            <app-filter class="app-btn" 
+[list]="filterList" 
+(onFilterChange)="filterChange($event)"*ngIf="!isclicked" >
+</app-filter>
+        </div> 
+        </div>
+    <hr>
+<div *ngIf="!isclicked" class="style">
+<div class="style" *ngFor="let user of users|paginate:{itemsPerPage:20,currentPage:p};">
+    <mat-card style="background-color: yellowgreen;">
+        <mat-card-title style="text-align:  center;font: weight 800px;"><b>{{user.id}}</b></mat-card-title>
+        <mat-card-header>NAME:{{user.first_name}}&nbsp;{{user.last_name}}</mat-card-header>
+        <mat-card-content>EMAIL:{{user.email}}</mat-card-content>
+        <mat-card-content>GENDER:{{user.gender}}</mat-card-content>
+        <mat-card-content>DOMAIN:{{user.domain}}</mat-card-content>
+        <mat-card-content>AVAILABLE:{{user.available}}</mat-card-content>
+        <mat-card-content align="right"style="height:100px;margin-right:47%;margin-top:-60px"><img [src]=user.avatar></mat-card-content>
+        <mat-card-actions (click)="addtocart(user.domain,user.first_name,user.last_name)"><button [disabled]="!user.available"class="my">Add To team</button></mat-card-actions> 
+    </mat-card>
+    <hr>
+</div>
+</div>
+<div *ngIf="isclicked">
+    <ng-content></ng-content>
+</div>
+<pagination-controls (pageChange)="p=$event" *ngIf="!isclicked"></pagination-controls>
+
+       
+

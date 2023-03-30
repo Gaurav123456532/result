@@ -1,0 +1,106 @@
+<h2>
+    Teams
+</h2>
+<hr>
+<mat-card style="background-color: yellowgreen;">
+    <mat-card-title>TEAM 1</mat-card-title>
+    <mat-card-header>Members </mat-card-header>
+        
+        <mat-card-content *ngFor="let cart of sales"> {{cart.firstname}} {{cart.lastname}}</mat-card-content>
+        
+   
+    <mat-card-content>Domain=Sales</mat-card-content>
+    <mat-card-content></mat-card-content>
+    <mat-card-content></mat-card-content>
+    <mat-card-content></mat-card-content>
+    <mat-card-content align="right"></mat-card-content>
+    
+    
+</mat-card>
+<hr>
+<mat-card style="background-color: yellowgreen;">
+    <mat-card-title>Team 2</mat-card-title>
+    <mat-card-header>Members</mat-card-header>
+    
+        <mat-card-content *ngFor="let cart of marketing"> {{cart.firstname}} {{cart.lastname}}</mat-card-content>
+        
+    <mat-card-content>Domain=Marketing</mat-card-content>
+    <mat-card-content></mat-card-content>
+    <mat-card-content></mat-card-content>
+    <mat-card-content></mat-card-content>
+    <mat-card-content align="right"></mat-card-content>
+     
+</mat-card>
+<hr>
+<mat-card style="background-color: yellowgreen;">
+    <mat-card-title>Team 3</mat-card-title>
+    <mat-card-header>Members</mat-card-header>
+
+        <mat-card-content *ngFor="let cart of it"> {{cart.firstname}} {{cart.lastname}}</mat-card-content>
+        
+    <mat-card-content>Domain=IT</mat-card-content>
+    <mat-card-content></mat-card-content>
+    <mat-card-content></mat-card-content>
+    <mat-card-content></mat-card-content>
+    <mat-card-content align="right"></mat-card-content>
+     
+</mat-card>
+<hr>
+<mat-card style="background-color: yellowgreen;">
+    <mat-card-title>Team 4</mat-card-title>
+    <mat-card-header>Members</mat-card-header>
+    
+        <mat-card-content *ngFor="let cart of management"> {{cart.firstname}} {{cart.lastname}}</mat-card-content>
+        
+    <mat-card-content>Domain=Management</mat-card-content>
+    <mat-card-content></mat-card-content>
+    <mat-card-content></mat-card-content>
+    <mat-card-content></mat-card-content>
+    <mat-card-content align="right"></mat-card-content>
+    
+</mat-card>
+<hr>
+<mat-card style="background-color: yellowgreen;">
+    <mat-card-title>Team 6</mat-card-title>
+    <mat-card-header>Members</mat-card-header>
+    
+        <mat-card-content *ngFor="let cart of finance"> {{cart.firstname}} {{cart.lastname}}</mat-card-content>
+       
+    <mat-card-content>Domain=Finance</mat-card-content>
+    
+    <mat-card-content></mat-card-content>
+    <mat-card-content></mat-card-content>
+    <mat-card-content></mat-card-content>
+    <mat-card-content align="right">></mat-card-content>
+   
+</mat-card>
+<hr>
+<mat-card style="background-color: yellowgreen;">
+    <mat-card-title>Team 7</mat-card-title>
+    <mat-card-header>Members</mat-card-header>
+   
+        <mat-card-content *ngFor="let cart of designing"> {{cart.firstname}} {{cart.lastname}}</mat-card-content>
+        
+    <mat-card-content>Domain=UI Designing</mat-card-content>
+    <mat-card-content></mat-card-content>
+    <mat-card-content></mat-card-content>
+    <mat-card-content></mat-card-content>
+    <mat-card-content align="right"></mat-card-content>
+    
+</mat-card>
+<hr>
+<mat-card style="background-color: yellowgreen;">
+    <mat-card-title>Team 8</mat-card-title>
+    <mat-card-header>Members</mat-card-header>
+   
+        <mat-card-content *ngFor="let cart of business"> {{cart.firstname}} {{cart.lastname}}</mat-card-content>
+       
+    <mat-card-content>Domain=Business Devlopment</mat-card-content>
+    <mat-card-content></mat-card-content>
+    <mat-card-content></mat-card-content>
+    <mat-card-content></mat-card-content>
+    <mat-card-content align="right"></mat-card-content>
+    
+</mat-card>
+<mat-card-actions (click)="addtocart()"><button class="my">back</button></mat-card-actions>
+
